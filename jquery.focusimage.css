@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+.focusimage,
+.focusimage ul,
+.focusimage ul li,
+.focusimage p {padding:0; margin:0;}
+
+.focusimage ul, 
+.focusimage ul li { list-style:none; }
+
+.focusimage a img { border:0;}
+
+.focusimage { position:relative; font-family:'微软雅黑'; visibility:hidden;}
+
+.focusimage,
+.focusimage-list,
+.focusimage-list li,
+.focusimage-list li img { width:640px; height:300px;  overflow:hidden;}	/* 此处设置图片大小 */
+
+
+.focusimage-list,
+.focusimage-caption, 
+.focusimage-index { position:absolute;}
+
+.focusimage-list { z-index:1; left:0; top:0;}
+.focusimage-caption { z-index:2; left:0; bottom:0; }
+.focusimage-index { z-index:3;}
+
+
+/* default */
+.focusimage-caption-default { height:50px; line-height:50px; width:100%; filter:alpha(opacity=50); -moz-opacity:0.5; -khtml-opacity: 0.5; opacity: 0.5; background-color:#000; }
+.focusimage-caption-default p { color:#fff; margin:0 0 0 10px; font-size:16px; }
+
+.focusimage-index-default { right:10px; bottom:10px; }
+.focusimage-index-default ,
+.focusimage-index-default li { height:22px; line-height:22px;}
+.focusimage-index-default li { display:block; float:left; width:20px; text-align:center; color:#900; background-color:#fff; border:1px solid #000; cursor:pointer; font-size:12px;}
+.focusimage-index-default li.actived { background-color:#900; color:#fff;}
+
+/* effect: boring */
+.focusimage-boring .focusimage-list li { display:none;}
+.focusimage-boring .focusimage-list li.actived { display:block;}
+
+/* effect: horizontal */
+.focusimage-horizontal .focusimage-list ul { position:absolute; top:0;}
+.focusimage-horizontal .focusimage-list li { display:block;}
+
+/* effect: vertical */
+.focusimage-vertical .focusimage-list ul { position:absolute; left:0;}
+.focusimage-vertical .focusimage-list li { display:block;}
+
+/* effect: gradient */
+.focusimage-gradient .focusimage-list ul,
+.focusimage-gradient .focusimage-list li { position:absolute; left:0; top:0;}
+.focusimage-gradient .focusimage-list li { display:block;}
+
+/* effect: thumbnail */
+.focusimage-thumbnail { height:364px;}
+.focusimage-thumbnail .focusimage-caption { bottom:64px;}
+.focusimage-thumbnail .focusimage-index { left:0; bottom:0; width:100%;}
+.focusimage-thumbnail .focusimage-index li { float:left; padding:0; padding-top:4px; cursor:pointer; margin:0; display:block; position:relative;}
+.focusimage-thumbnail .focusimage-index li img { display:block/*ie6 fixed*/; border:2px solid #999;}
+.focusimage-thumbnail .focusimage-index li.actived { background: url(arrow.gif) no-repeat center top;}
+.focusimage-thumbnail .focusimage-index li.actived img { border-color:#fff;}
+.focusimage-thumbnail .focusimage-index li img,
+.focusimage-thumbnail .focusimage-index li .masklayer { width:124px; height:60px;}
+.focusimage-thumbnail .focusimage-index li .masklayer { position:absolute; left:2px; top:6px; background-color:#000;}
